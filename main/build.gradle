@@ -1,15 +1,16 @@
 apply plugin: 'com.android.feature'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "25.0.3"
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildTools
+
     defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.targetSdk
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -25,5 +26,5 @@ dependencies {
     })
     implementation project(':base')
     testImplementation 'junit:junit:4.12'
-    
+    compile project(path: ':detail')
 }

@@ -1,7 +1,6 @@
 apply plugin: 'com.android.feature'
 
 android {
-    baseFeature true
     compileSdkVersion rootProject.compileSdk
     buildToolsVersion rootProject.buildTools
 
@@ -21,12 +20,5 @@ android {
 }
 
 dependencies {
-    application project(':installed')
-    feature project(':main')
-    feature project(":detail")
-
-    api "com.android.support:appcompat-v7:$rootProject.supportLib"
-    api 'com.android.support:appcompat-v7:26.0.0-beta2'
-    api 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    api project(':base')
 }

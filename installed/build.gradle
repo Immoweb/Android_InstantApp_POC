@@ -1,19 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "25.0.3"
-
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildTools
 
     defaultConfig {
         applicationId "be.ibad.instantapp"
-        minSdkVersion 23
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-
-
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.targetSdk
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -23,6 +21,7 @@ android {
 }
 
 dependencies {
-    implementation project(':feature')
+    implementation project(':main')
     implementation project(':base')
+    implementation project(':detail')
 }
