@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="be.ibad.instantapp.feature">
+    package="be.ibad.instantapp.feature.main">
 
     <application>
-        <activity android:name=".MainActivity">
+        <activity android:name="be.ibad.instantapp.MainActivity">
             <intent-filter
                 android:autoVerify="true"
-                android:order="2">
+                android:order="1">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />

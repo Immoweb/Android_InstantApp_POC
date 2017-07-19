@@ -1,4 +1,4 @@
-package be.ibad.detail;
+package be.ibad.instantapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

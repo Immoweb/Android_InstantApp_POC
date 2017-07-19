@@ -1,4 +1,4 @@
-package be.ibad.detail;
+package be.ibad.instantapp;
 
 import org.junit.Test;
 
