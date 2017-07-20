@@ -6,13 +6,13 @@
         <activity android:name="be.ibad.instantapp.MainActivity">
             <intent-filter
                 android:autoVerify="true"
-                android:order="1">
+                android:order="2">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:host="ibad.be" />
-                <data android:pathPrefix="/test" />
+                <data android:pathPattern="/.*" />
                 <data android:scheme="https" />
                 <data android:scheme="http" />
             </intent-filter>

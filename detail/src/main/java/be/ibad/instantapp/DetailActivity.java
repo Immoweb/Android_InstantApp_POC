@@ -49,11 +49,11 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     public void setUpView(Post post) {
-        mTitleTextView.setText(post.getTitlePlain());
+        mTitleTextView.setText(Html.fromHtml(post.getTitlePlain()));
         mBodyTextView.setText(Html.fromHtml(post.getContent()));
-        Log.i("DetailActivity", post.getAttachments().get(0).getUrl());
+        Log.i("DetailActivity", post.getThumbnailImages().getThumbnail().getUrl());
         Picasso.with(DetailActivity.this)
-                .load(post.getAttachments().get(0).getUrl())
+                .load(post.getThumbnailImages().getThumbnail().getUrl())
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(mImageView);
     }
